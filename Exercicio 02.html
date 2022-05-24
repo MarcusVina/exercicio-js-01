@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GN | 02</title>
+            <style>
+                    body{
+                        background-color: cornflowerblue;
+                        font-family: 'Courier New', Courier, monospace;
+                        text-align: center;
+                    }
+
+                        .box-nav{
+                            background-color: gold;
+                            padding: 5px;
+                            border-radius: 15px;
+                        }
+                            .box{
+                                background: rgba(0, 0, 0, 0.6);
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                padding: 15px;
+                                border-radius: 15px;
+                                color: #fff;
+                        
+                            }
+                                input{
+                                    padding: 10px;
+                                    border: none;
+                                    outline: none;
+                                    border-radius: 10px;
+                                    font-size: 15px;
+                                    width: 50%;
+                                }
+                                    button{
+                                        padding: 10px;
+                                        border: none;
+                                        outline: none;
+                                        width: 50%;
+                                        background-color: slateblue;
+                                        color: #fff;
+                                        border-radius: 10px;
+                                        cursor: pointer;
+                                        transition: 0.5s;
+                                    }
+                                    button:hover{
+                                        background-color: cornflowerblue;
+                                    }
+            </style>
+</head>
+
+<body>
+    <div class="box-nav">
+        <h1>Exercício #02</h1>
+        <h2>Marcus Vinna</h2>
+    </div>
+    <div class="box">
+    <p> Leia valores A e B. Trocar os valores entre as duas variáveis, a variável A passa a possuir o valor da variável B e a variável B passa a possuir o valor da variável A.</p>
+    <input type="text" id="num-a" placeholder="Digite um valor A">
+        <br><br>
+        <input type="text" id="num-b" placeholder="Digite um valor B">
+        <br><br>
+    <button onclick="go()">Enviar</button>
+    </div>
+</body>
+
+    <script>
+            function go()
+            {
+                var a = document.getElementById('num-a').value;
+                var b = document.getElementById('num-b').value;
+                console.log('Variável A ' +a);
+                console.log('Variável B ' +b);
+                var c = b;
+                var b = a;
+                var a = c
+                console.log('Variável A ' +a);
+                console.log('Variável B ' +b);
+            }
+    </script>
+</html>
